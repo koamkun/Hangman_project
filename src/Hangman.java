@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Hangman {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("C:/Users/User/OneDrive/Documents/words_alpha.txt"));
+        Scanner scanner = new Scanner(new File("words_alpha.txt"));
         Scanner keyboard = new Scanner(System.in);
 
         List<String> words = new ArrayList<>();
@@ -54,11 +54,13 @@ public class Hangman {
     }
 
     private static void PrintHangedMan(int wrongCount) {
+
         System.out.println(" _______");
         System.out.println(" |      |");
 
         if (wrongCount >= 1) {
             System.out.println(" O");
+
         }
 
         if (wrongCount >= 2) {
